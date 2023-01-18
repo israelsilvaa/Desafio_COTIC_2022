@@ -1,0 +1,38 @@
+.main-bg{
+    background-image: url('/assets/The-Boys-segunda-temporada-scaled.jpg');
+    background-size: cover;
+}
+.transparent{
+    opacity: 0.5;
+}
+
+.form-back{
+    background-color: #5e6061;
+    
+}
+form {
+    opacity: 1.0;
+}
+
+/* footer */
+footer {
+    text-align: center;
+    background-color: #353E48;
+    color: #FFF;
+    padding: 30px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+#letra-laranja {
+    color: orange;
+}
+
+footer p {
+    margin-bottom: 0;
+}
+
+footer a, a:hover {
+    color: #FFF;
+}

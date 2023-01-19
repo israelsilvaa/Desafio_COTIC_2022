@@ -37,12 +37,12 @@
                     </a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="/formulario">
+                    <a class="nav-link" href="/form">
                         Formulário <span class="sr-only">(página atual)</span>
                     </a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="/lista">
+                    <a class="nav-link" href="/list">
                         Lista <span class="sr-only">(página atual)</span>
                     </a>
                 </li>
@@ -57,8 +57,6 @@
             <p>Desafio <span id="letra-laranja">COTIC</span> 2022</p>
         </a>
     </footer>
-
-
 
 </body>
 

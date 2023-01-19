@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\PersonagemController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,20 +13,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
-Route::get('/home', function () {
-    return view('home');
-});
+// GET:     BUSCAR dados no banco.
+// POST:    SALVAR dados no banco.
+// DELETE:  DELETAR dados do banco.
+// PUT:     ATUALIZAR dados do banco.
 
-Route::get('/formulario', function () {
-    return view('formulario');
-});
+Route::get('/home', [PersonagemController::class, 'index']);
 
-Route::get('/create', []);
+// usuario é redirecionado para a view de formulario
+Route::get('/form', [PersonagemController::class, 'create']);
 
-Route::get('/lista', function () {
-    return view('lista');
-});
+// apos perencher o form, essa rota dispara o metodo de persistência
+// no banco de dados.
+Route::post('/personagem', [PersonagemController::class, 'store']);
+
+// Para retorno de todos os personagem do banco de dados;
+Route::get('/list', [PersonagemController::class, 'show']);
+

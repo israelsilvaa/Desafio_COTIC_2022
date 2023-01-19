@@ -8,10 +8,24 @@
 
 .form-back{
     background-color: #5e6061;
-    
+    margin-top: 10px;
+    position: absolute;
 }
+
 form {
     opacity: 1.0;
+}
+
+form div label{
+    color: rgb(18, 18, 18);
+    margin-bottom: 0px;
+}
+.msg{
+    background-color: green;
+    text-align: center;
+}
+.gb-list{
+    background-color: #5e6061;
 }
 
 /* footer */
@@ -19,7 +33,7 @@ footer {
     text-align: center;
     background-color: #353E48;
     color: #FFF;
-    padding: 30px;
+    padding: 5px;
     position: absolute;
     bottom: 0;
     width: 100%;

@@ -10,7 +10,10 @@
 
             <div class="col-xl-12">
 
-                <a href="/formulario">
+                <h1>Desafio da COTIC, refatorado em laravel.</h1>
+
+
+                <a href="/personagem/form">
                     <button class="btn btn-info">formulario</button>
                 </a>
 

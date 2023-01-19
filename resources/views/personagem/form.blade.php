@@ -5,14 +5,17 @@
 @section('content')
 
 
-
-    <div class="col-md-6 offset-md-3 form-back">
-
-        @csrf
-        <form action="/crate" method="POST">
+    <div class="container-fluid">
+        @if (session('msg'))
+            <p class="msg"> {{ session('msg') }} </p>
+        @endif
+    </div>
+    <div class="col-md-4 offset-md-3 form-back">
+        <form action="/personagem" method="POST">
+            @csrf
             <div class="form-group">
-                <label for="name">Nome do personagem</label>
-                <input class="form-control" type="text" name="name" placeholder="Digite seu nome" required>
+                <label for="nome">Nome do personagem</label>
+                <input class="form-control" type="text" name="nome" placeholder="Digite seu nome" required>
             </div>
             <div class="form-group">
                 <label for="idade">Idade</label>
@@ -32,10 +35,13 @@
             </div>
             <div class="form-group">
                 <label for="biografia">Biografia</label>
-                <textarea name="biografia" id="" cols="30" rows="5" class="form-control"
+                <textarea name="biografia" id="" cols="30" rows="2" class="form-control"
                     placeholder="Nacido em xxxx..."></textarea>
             </div>
-            <input type="submit" class="btn btn-success" value="Salvar">
+            <div class="btn-personagem">
+                <input type="submit" class="btn btn-success" value="Salvar" id="btn-cadastro">
+            </div>
+            <input type="submit" class="btn btn-primary" value="Criar Evento">
         </form>
     </div>
 

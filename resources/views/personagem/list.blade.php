@@ -13,16 +13,30 @@
                 <th>Alinhamento</th>
                 <th>Biografia</th>
                 <th>Criação</th>
+                <th>Operações</th>
             </thead>
             <tbody id="tabela">
                 @foreach ($personagensVetor as $mutante)
                     <thead>
-                        <td>{{ $mutante->nome }}</td>
+                        @if($mutante->alinhamento == 'super')
+                            <td class="red">{{ $mutante->nome }}</td>
+                        @else
+                            <td class="blue">{{ $mutante->nome }}</td>
+                        @endif
                         <td>{{ $mutante->interprete }}</td>
                         <td>{{ $mutante->idade }}</td>
-                        <td>{{ $mutante->alinhamento }}</td>
+                        @if($mutante->alinhamento == 'super')
+                            <td class="red">{{ $mutante->alinhamento }}</td>
+                        @else
+                            <td class="blue">{{ $mutante->alinhamento }}</td>
+                        @endif
                         <td>{{ $mutante->biografia }}</td>
                         <td>{{ $mutante->created_at }}</td>
+                        <div>
+                            <td> <a href="#"> <ion-icon name="checkmark-outline"> </ion-icon> </a></td>
+                            <td> <a href="#"> <ion-icon name="create-outline"> </ion-icon> </a></td>
+                            <td> <a href="#"> <ion-icon name="trash-outline"> </ion-icon> </a></td>
+                        </div>
                     </thead>
                 @endforeach
             </tbody>

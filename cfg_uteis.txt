@@ -1,0 +1,12 @@
+php create-project laravel/laravel nome_projeto
+
+Model:
+php artisan make:model Nome
+
+Controller:
+php artisan make:controller nomeController
+
+php artisan migrate
+php artisan migrate:status
+php artisan migration:reset
+php artisan make:migration nomedatabela_table

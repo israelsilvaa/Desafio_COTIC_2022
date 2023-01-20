@@ -19,10 +19,12 @@ use App\Http\Controllers\PersonagemController;
 // DELETE:  DELETAR dados do banco.
 // PUT:     ATUALIZAR dados do banco.
 
+Route::get('/', [PersonagemController::class, 'index']);
+
 Route::get('/home', [PersonagemController::class, 'index']);
 
 // usuario é redirecionado para a view de formulario
-Route::get('/form', [PersonagemController::class, 'create']);
+Route::get('/personagem/form', [PersonagemController::class, 'create']);
 
 // apos perencher o form, essa rota dispara o metodo de persistência
 // no banco de dados.

@@ -41,7 +41,6 @@
             <div class="btn-personagem">
                 <input type="submit" class="btn btn-success" value="Salvar" id="btn-cadastro">
             </div>
-            <input type="submit" class="btn btn-primary" value="Criar Evento">
         </form>
     </div>
 

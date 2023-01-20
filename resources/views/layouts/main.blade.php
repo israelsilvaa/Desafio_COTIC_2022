@@ -41,7 +41,7 @@
                     </a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="/form">
+                    <a class="nav-link" href="/personagem/form">
                         Formulário <span class="sr-only">(página atual)</span>
                     </a>
                 </li>

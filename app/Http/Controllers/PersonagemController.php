@@ -33,7 +33,7 @@ class PersonagemController extends Controller
         
         $personagem->save();
 
-        return redirect('/form')->with('msg', 'Personagem criado com sucesso!');
+        return redirect('/personagem/form')->with('msg', 'Personagem criado com sucesso!');
     }
 
 

@@ -1,11 +1,17 @@
+#instalar laravel do zero:
 php create-project laravel/laravel nome_projeto
 
-Model:
+#inicializar projeto clonado:
+composer install
+php artisan key:generate
+
+Criar Model:
 php artisan make:model Nome
 
-Controller:
+Criar Controller:
 php artisan make:controller nomeController
 
+Migrations:
 php artisan migrate
 php artisan migrate:status
 php artisan migration:reset

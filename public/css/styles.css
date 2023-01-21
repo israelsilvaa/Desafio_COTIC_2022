@@ -1,12 +1,13 @@
-.main-bg{
+.main-bg {
     background-image: url('/assets/The-Boys-segunda-temporada-scaled.jpg');
     background-size: cover;
 }
-.transparent{
+
+.transparent {
     opacity: 0.5;
 }
 
-.form-back{
+.form-back {
     background-color: #5e6061;
     margin-top: 10px;
     position: absolute;
@@ -16,15 +17,19 @@ form {
     opacity: 1.0;
 }
 
-form div label{
+form div label {
     color: rgb(18, 18, 18);
-    margin-bottom: 0px;
+    margin-bottom: 5px;
 }
-.msg{
+
+
+
+.msg {
     background-color: green;
     text-align: center;
 }
-.gb-list{
+
+.gb-list {
     background-color: #5e6061;
 }
 
@@ -39,6 +44,18 @@ footer {
     width: 100%;
 }
 
+.branco {
+    color: #FFF;
+}
+
+.red {
+    color: red;
+}
+
+.blue {
+    color: blue;
+}
+
 #letra-laranja {
     color: orange;
 }
@@ -47,6 +64,7 @@ footer p {
     margin-bottom: 0;
 }
 
-footer a, a:hover {
+footer a,
+a:hover {
     color: #FFF;
 }

@@ -9,4 +9,7 @@ class Personagens extends Model
 {
     use HasFactory;
 
+    
+    protected $guarded = [];
+
 }

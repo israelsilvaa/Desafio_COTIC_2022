@@ -14,22 +14,29 @@ use App\Http\Controllers\PersonagemController;
 */
 
 
-// GET:     BUSCAR dados no banco.
-// POST:    SALVAR dados no banco.
-// DELETE:  DELETAR dados do banco.
-// PUT:     ATUALIZAR dados do banco.
-
+// metodos de renderização ou redirecionamento de view
 Route::get('/', [PersonagemController::class, 'index']);
-
 Route::get('/home', [PersonagemController::class, 'index']);
+Route::get('/sobre', [PersonagemController::class, 'sobre']);
 
+// C
+// POST:    SALVAR dados no banco.
 // usuario é redirecionado para a view de formulario
-Route::get('/personagem/form', [PersonagemController::class, 'create']);
-
 // apos perencher o form, essa rota dispara o metodo de persistência
 // no banco de dados.
+Route::get('/personagem/form', [PersonagemController::class, 'create']);
 Route::post('/personagem', [PersonagemController::class, 'store']);
 
+// R
+// GET:     BUSCAR dados no banco.
 // Para retorno de todos os personagem do banco de dados;
 Route::get('/list', [PersonagemController::class, 'show']);
 
+// U
+// PUT:     ATUALIZAR dados do banco.
+Route::put('/personagem/update/{id}', [PersonagemController::class, 'update']);
+
+// D
+// DELETE:  DELETAR dados do banco.
+Route::delete('/personagem/delete/{id}', [PersonagemController::class, 'delete']);
+Route::post('/personagem/edit/{id}', [PersonagemController::class, 'edit']);

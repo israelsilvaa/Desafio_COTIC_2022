@@ -5,22 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>    @yield('title')    </title>
+    <title> @yield('title') </title>
 
-     <!-- Fonte do Google -->
-   <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet">
+    <!-- Fonte do Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet">
 
-   <!-- CSS Bootstrap -->
-   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-       integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- CSS Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-   <!-- CSS da aplicação -->
-   <link rel="stylesheet" href="/css/styles.css">
-   <script src="/js/scripts.js"></script>
-   
-   <!-- ICONES da aplicação -->
-   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!-- CSS da aplicação -->
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="/js/scripts.js"></script>
+
+    <!-- ICONES da aplicação -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </head>
 
 <body class="main-bg">
@@ -37,24 +37,38 @@
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
                     <a class="nav-link" href="/home">
-                        Home <span class="sr-only">(página atual)</span>
+                        Home
                     </a>
                 </li>
                 <li class="nav-item active">
                     <a class="nav-link" href="/personagem/form">
-                        Formulário <span class="sr-only">(página atual)</span>
+                        Formulário 
                     </a>
                 </li>
                 <li class="nav-item active">
                     <a class="nav-link" href="/list">
-                        Lista <span class="sr-only">(página atual)</span>
+                        Lista 
+                    </a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/sobre">
+                        Sobre 
                     </a>
                 </li>
             </ul>
         </div>
     </nav>
 
-    @yield('content')
+
+    
+    <div 
+        @if (session('msg'))
+            <p class="msg">{{ session('msg') }}</p>
+        @endif
+        @yield('content')
+    </div>
+  
+
 
     <footer>
         <a href="http://proeg.ufpa.br/cotic/">

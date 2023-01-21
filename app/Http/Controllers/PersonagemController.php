@@ -15,13 +15,6 @@ class PersonagemController extends Controller
         return view('personagem.form');
     }
 
-    public function show(){
-
-        $personagens = Personagens::all();
-        
-        return view('personagem.list', ['personagensVetor' => $personagens]);
-    }
-
     public function store(Request $request){
         
         $personagem = new Personagens;
@@ -36,5 +29,37 @@ class PersonagemController extends Controller
         return redirect('/personagem/form')->with('msg', 'Personagem criado com sucesso!');
     }
 
+    public function show(){
 
+        $personagens = Personagens::all();
+        
+        return view('personagem.list', ['personagensVetor' => $personagens]);
+    }
+
+    public function update(Request $request){
+        
+        $dado = $request->all();
+
+        Personagens::findOrFail($request->id)->update($dado);
+
+        return redirect('/list')->with('msg', 'Personagem editado com sucesso!');
+    }
+    
+    public function edit($id){
+
+        $personagem = Personagens::findOrFail($id);
+
+        return view('/personagem.edit', ['personagem' => $personagem]);
+    }
+
+    public function delete($id){
+
+        Personagens::findOrFail($id)->delete();
+
+        return redirect('list')->with('msg', 'Personagem deletado com sucesso!');
+    }
+
+    public function sobre(){
+        return view('personagem.sobre');
+    }
 }

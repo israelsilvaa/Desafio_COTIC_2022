@@ -16,5 +16,3 @@ php artisan migrate
 php artisan migrate:status
 php artisan migration:reset
 php artisan make:migration nomedatabela_table
-
-A connection timeout was encountered. If you intend to run Composer without connecting to the internet, run the command again prefixed with COMPOSER_DISABLE_NETWORK=1 to make Composer run in offline mode

@@ -35,8 +35,8 @@ Route::get('/list', [PersonagemController::class, 'show']);
 // U
 // PUT:     ATUALIZAR dados do banco.
 Route::put('/personagem/update/{id}', [PersonagemController::class, 'update']);
+Route::post('/personagem/edit/{id}', [PersonagemController::class, 'edit']);
 
 // D
 // DELETE:  DELETAR dados do banco.
 Route::delete('/personagem/delete/{id}', [PersonagemController::class, 'delete']);
-Route::post('/personagem/edit/{id}', [PersonagemController::class, 'edit']);

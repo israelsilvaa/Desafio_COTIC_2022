@@ -22,6 +22,11 @@ form div label {
     margin-bottom: 5px;
 }
 
+.titulo-pagina {
+    padding: 100px 0px 60px 0px;
+    background-color: #2a9ee2;
+    text-align: center;
+}
 
 
 .msg {

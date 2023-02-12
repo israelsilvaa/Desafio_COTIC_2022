@@ -54,6 +54,15 @@
                     <a class="nav-link" href="/sobre">
                         Sobre 
                     </a>
+                </li>                <li class="nav-item active">
+                    <a class="nav-link" href="{{Route('site.login')}}">
+                        Login 
+                    </a>
+                </li>
+                <li>                <li class="nav-item active">
+                    <a class="nav-link" href="{{route('site.sair')}}">
+                        Sair 
+                    </a>
                 </li>
             </ul>
         </div>

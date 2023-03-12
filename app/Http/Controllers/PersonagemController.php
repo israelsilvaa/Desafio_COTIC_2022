@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class PersonagemController extends Controller
 {
     public function index (){
-        return view('home');
+        return view('personagem.list');
     }
 
     public function create(){

@@ -11,9 +11,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet">
 
     <!-- CSS Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
     <!-- CSS da aplicação -->
     <link rel="stylesheet" href="/css/styles.css">
     <script src="/js/scripts.js"></script>
@@ -36,54 +39,58 @@
         <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="/home">
+                    <a class="nav-link" href="{{route('home')}}">
                         Home
                     </a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="/personagem/form">
-                        Formulário 
+                    <a class="nav-link" href="{{route('form')}}">
+                        Formulário
                     </a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="/list">
-                        Lista 
+                    <a class="nav-link" href="{{route('personagem.list')}}">
+                        Lista
                     </a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="/sobre">
-                        Sobre 
-                    </a>
-                </li>                <li class="nav-item active">
-                    <a class="nav-link" href="{{Route('site.login')}}">
-                        Login 
+                    <a class="nav-link" href="{{route('sobre')}}">
+                        Sobre
                     </a>
                 </li>
-                <li>                <li class="nav-item active">
-                    <a class="nav-link" href="{{route('site.sair')}}">
-                        Sair 
+                <li class="nav-item active">
+                    <a class="nav-link" href="{{route('login')}}">
+                        Login
                     </a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="{{route('register')}}">
+                        Registrar
+                    </a>
+                </li>
+                <li>
+                <li class="nav-item active">
+                    <form action="{{ route('logout') }}" method="POST">
+                        @csrf
+                        <button class="nav-link btn" type="submit">sair
+                        </form>
+                    </button>
                 </li>
             </ul>
         </div>
     </nav>
 
 
-    
-    <div 
-        @if (session('msg'))
-            <p class="msg">{{ session('msg') }}</p>
-        @endif
-        @yield('content')
-    </div>
-  
+
+    <div @if (session('msg')) <p class="msg">{{ session('msg') }}</p> @endif @yield('content') </div>
 
 
-    <footer>
-        <a href="http://proeg.ufpa.br/cotic/">
-            <p>Desafio <span id="letra-laranja">COTIC</span> 2022</p>
-        </a>
-    </footer>
+
+        <footer>
+            <a href="http://proeg.ufpa.br/cotic/">
+                <p>Desafio <span id="letra-laranja">COTIC</span> 2022</p>
+            </a>
+        </footer>
 
 </body>
 

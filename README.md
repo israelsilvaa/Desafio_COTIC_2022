@@ -49,7 +49,8 @@ Apos clonar ou baixar o .zip do projeto, execute os passos:
 
 -iniciar os seviços dos xamp e criar uma base de dados com nome de sua preferencia e codificação recomendada utf8mb4_general_ci.
 
--Dentro da pasta do projeto criar um arquivo chamado ".env" o seui conteudo deve ser copiado inteiramente do arquivo .env-example, depois configure apenas as variaveIS
+-Dentro da pasta do projeto criar um arquivo chamado ".env" o seui conteudo deve ser copiado inteiramente do arquivo .env-example, depois configure apenas as variaveis
+
     DB_DATABASE=NomeDoSeuBanco // criado na etapa anterior
     DB_USERNAME=root    // o padrão do xamp é "root".    
     DB_PASSWORD=        // o padrão do xamp é uma senha vazia.

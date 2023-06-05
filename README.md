@@ -8,17 +8,6 @@ Este projeto foi proposto como prova avaliativa da Coordenadoria de Tecnologia d
 - O que você aprendeu com ele?
     Aprendi os fundamentos do ![PHP](https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white), a rotina básica com a implementação de crud, como se faz essa conexão com o banco e ainda a sintaxe com os elementos ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white).
 
-## Tabela de conteúdos
-
-Aqui você coloca links para acessar mais facilmente cada um dos tópicos do seu README.
-
-Exemplo:
-
-- [Arquitetura](#arquitetura)
-- [Features](#features)
-- [Instruções de execução](#instruções-de-execução)
-- [Extra](#extra---Sistema-de-autenticação-nativa-do-laravel)
-
 ## Arquitetura
 
 A arquitetura do desafio já havia sido bem definida devido ser uma seleção para desenvolvimento web em ![PHP](https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white), ainda assim o paradigma escolhido foi orientação a objetos, como eu teria que persistir vários personagem, todos com seus atributos, a orientação a objeto seria perfeita e simples para resolver esse desafio, esse paradigma foi mais visível com ![PHP](https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white) puro, logo depois o código ficou bem mais limpo quando implementado no Laravel 8.  
